@@ -1,0 +1,12 @@
+<h4>Seleccione Indicador</h4>
+<select [formControl]="seleccion">
+  <option value="aportehidricos">Aportes hídricos (GWh)</option>
+  <option value="detalleaportehidrico">Detalle aportes hídricos (GWh)</option>
+</select>
+
+<div *ngIf="seleccion.value==='aportehidricos'">
+  <app-grafica></app-grafica>
+</div>
+<div *ngIf="seleccion.value==='detalleaportehidrico'">
+  <app-detalleaporteshidricos></app-detalleaporteshidricos>
+</div>
