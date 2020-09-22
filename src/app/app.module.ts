@@ -1,5 +1,5 @@
+import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
@@ -11,6 +11,8 @@ import { GraficademandaComponent } from './componentes/graficademanda/graficadem
 import { GridcomponentComponent } from './componentes/gridcomponent/gridcomponent.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetalleaporteshidricosComponent } from './componentes/oferta/detalleaporteshidricos/detalleaporteshidricos.component';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { DetalleaporteshidricosComponent } from './componentes/oferta/detalleapo
     DetalleaporteshidricosComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
     ChartsModule,

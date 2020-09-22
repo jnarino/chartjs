@@ -1,12 +1,16 @@
 <table id="test">
-    <tr>
-        <th *ngFor="let col of tableColumns">
-            {{col}}
-        </th>
-    </tr>
-    <tr *ngFor="let val of valores">
-        <td *ngFor="let col of tableColumns">
-            {{tableColumns[val]}}
-        </td>
-    </tr>
+    <thead>
+        <tr>
+            <th *ngFor="let column of tableColumns">
+                {{column}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fila of valores">
+            <td *ngFor="let elemto of fila">
+                {{ elemto }}
+            </td>
+        </tr>
+    </tbody>
 </table>
