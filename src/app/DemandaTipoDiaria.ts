@@ -1,11 +1,11 @@
-export interface DemandaTipoDiaria {
+export class DemandaTipoDiaria {
   Nombre: string;
   Resolucion: string;
   TipoGrafico: string;
   Variables: Variable[];
 }
 
-export interface Datos {
+export class Datos {
   Nombre: string;
   Id: string;
   Fecha: Date;
@@ -13,7 +13,7 @@ export interface Datos {
   Dias: number;
 }
 
-export interface Variable {
+export class Variable {
   Nombre: string;
   TipoGrafico: string;
   UnidadMedida: string;
