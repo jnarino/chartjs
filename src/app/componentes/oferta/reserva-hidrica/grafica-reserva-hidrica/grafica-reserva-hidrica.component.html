@@ -1,0 +1,11 @@
+<div class="chart-wrapper" style="width: 70%;margin: auto;" >
+  <canvas baseChart *ngIf="mostrarGraficaReservaHidricaService.grafica.datasets.length > 0"
+      [datasets]="mostrarGraficaReservaHidricaService.grafica.datasets"
+      [labels]="mostrarGraficaReservaHidricaService.grafica.labels"
+      [options]="mostrarGraficaReservaHidricaService.grafica.options"
+      [colors]="mostrarGraficaReservaHidricaService.grafica.colors"
+      [legend]="mostrarGraficaReservaHidricaService.grafica.legend"
+      [chartType]="mostrarGraficaReservaHidricaService.grafica.chartType"
+      [plugins]="mostrarGraficaReservaHidricaService.grafica.plugins">
+  </canvas>
+</div>

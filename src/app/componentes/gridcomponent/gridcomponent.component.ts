@@ -13,6 +13,7 @@ export class GridcomponentComponent implements OnInit {
   constructor() { }
 
   public seleccion = new FormControl('aportehidricos');
+  public seleccionResolucion = new FormControl('diaria');
 
   ngOnInit(): void {
   }
