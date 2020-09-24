@@ -12,6 +12,8 @@ import { GridcomponentComponent } from './componentes/gridcomponent/gridcomponen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetalleaporteshidricosComponent } from './componentes/oferta/detalleaporteshidricos/detalleaporteshidricos.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { GraficaReservaHidricaComponent } from './componentes/oferta/reserva-hidrica/grafica-reserva-hidrica/grafica-reserva-hidrica.component';
+import { DetalleReservaHidricaComponent } from './componentes/oferta/reserva-hidrica/detalle-reserva-hidrica/detalle-reserva-hidrica.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { BrowserModule } from '@angular/platform-browser';
     GraficaComponent,
     GraficademandaComponent,
     GridcomponentComponent,
-    DetalleaporteshidricosComponent
+    DetalleaporteshidricosComponent,
+    GraficaReservaHidricaComponent,
+    DetalleReservaHidricaComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,76 @@
+<div class="table-responsive">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">Volumen útil diario Mm3</th>
+        <th scope="col">Volumen útil diario Gwh</th>
+        <th scope="col">Volumen útil %</th>
+        <th scope="col">Capacidad útil Gwh</th>
+        <th scope="col">NEP %</th>
+        <th scope="col">(Vol útil - NEP) %</th>
+        <th scope="col">Volumen Mm3</th>
+        <th scope="col">Volumen Gwh</th>
+        <th scope="col">Volumen %</th>
+        <th scope="col">Volumen máximo técnico Gwh</th>
+        <th scope="col">Vertimiento Gwh</th>
+        <th scope="col">MOS Gwh</th>
+        <th scope="col">MOI Gwh</th>
+        <th scope="col">Diferencia</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let region of regiones">
+      <tr>
+        <th>{{region.nombre}}</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let ciudad of region.ciudades">
+        <th>{{ciudad.nombre}}</th>
+        <td>{{ciudad.volumenUtilDiarioMm3 | number : '1.2-2'}}</td>
+        <td>{{ciudad.volumenUtilDiarioGwh | number : '1.2-2'}}</td>
+        <td>{{ciudad.volumenUtilDiarioPorcentaje | number : '1.2-2'}}</td>
+        <td>{{ciudad.capacidadUtilGwh | number : '1.2-2'}}</td>
+        <td>{{ciudad.nepPorcentaje | number : '1.2-2'}}</td>
+        <td>{{ciudad.volumenUtilMenosNepPorcentaje | number : '1.2-2'}}</td>
+        <td>{{ciudad.volumenMm3 | number : '1.2-2'}}</td>
+        <td>{{ciudad.volumenGwh | number : '1.2-2'}}</td>
+        <td>{{ciudad.volumenPorcentaje | number : '1.2-2'}}</td>
+        <td>{{ciudad.volumenMaximoTecnicoGwh | number : '1.2-2'}}</td>
+        <td>{{ciudad.vertimientoGwh | number : '1.2-2'}}</td>
+        <td>{{ciudad.mosGwh | number : '1.2-2'}}</td>
+        <td>{{ciudad.moiGwh | number : '1.2-2'}}</td>
+        <td>{{ciudad.diferencia | number : '1.2-2'}}</td>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th>{{region.sumaVolumenUtilDiarioGwh | number : '1.2-2'}}</th>
+        <th>{{region.sumaVolumenUtilDiarioPorcentaje | number : '1.2-2'}}</th>
+        <th>{{region.sumaCapacidadUtilGwh | number : '1.2-2'}}</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>{{region.sumaVolumenGwh | number : '1.2-2'}}</th>
+        <th>{{region.sumanVolumenPorcentaje | number : '1.2-2'}}</th>
+        <th>{{region.sumanVolumenMaximoTecnicoGwh | number : '1.2-2'}}</th>
+        <th>{{region.sumanVertimientoGwh | number : '1.2-2'}}</th>
+        <th>{{region.sumanMosGwh | number : '1.2-2'}}</th>
+        <th>{{region.sumanMoiGwh | number : '1.2-2'}}</th>
+        <th>{{region.sumaDiferencia | number : '1.2-2'}}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>

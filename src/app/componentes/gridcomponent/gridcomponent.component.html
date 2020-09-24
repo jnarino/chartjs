@@ -2,6 +2,14 @@
 <select [formControl]="seleccion">
   <option value="aportehidricos">Aportes hídricos (GWh)</option>
   <option value="detalleaportehidrico">Detalle aportes hídricos (GWh)</option>
+  <option value="reservasHidricas">Reservas hídricas (GWh)</option>
+  <option value="detalleReservasHidricas">Detalle reservas hídricas (GWh)</option>
+</select>
+
+<h4>Resolución</h4>
+<select [formControl]="seleccionResolucion">
+  <option value="diaria">Diaria</option>
+  <option value="mensual">Mensual</option>
 </select>
 
 <div *ngIf="seleccion.value==='aportehidricos'">
@@ -9,4 +17,10 @@
 </div>
 <div *ngIf="seleccion.value==='detalleaportehidrico'">
   <app-detalleaporteshidricos></app-detalleaporteshidricos>
+</div>
+<div *ngIf="seleccion.value==='reservasHidricas'">
+  <app-grafica-reserva-hidrica [resolucion]="seleccionResolucion.value"></app-grafica-reserva-hidrica>
+</div>
+<div *ngIf="seleccion.value==='detalleReservasHidricas'">
+  <app-detalle-reserva-hidrica></app-detalle-reserva-hidrica>
 </div>
