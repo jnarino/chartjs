@@ -1,19 +1,37 @@
-export class DetalleAporteHidricos {
+export interface DetalleAporteHidricos {
     Campos: string[];
     Valores: string[][];
-}
+    /* 
+        convertirDatos() {
+    
+            var groupBy = function <TItem>(xs: TItem[], key: string): { [key: string]: TItem[] } {
+                return xs.reduce(function (rv, x) {
+                    (rv[x[key]] = rv[x[key]] || []).push(x);
+                    return rv;
+                }, {});
+            };
+    
+            this.Valores.forEach(result => {
+                result.forEach(element => {.
+    
+    
+                });
+    
+            });*/
+};
 
-export class Region {
-    constructor(
-        public id: number,
-        public nombre: string,
-        public ciudades: Ciudades[],
-        public sumaCaudalGwh: number,
-        public sumaCaudalPorcentaje: number,
-        public sumaPromedioAcumulado: number,
-        public sumaHistoricoGwh: number,
-        public sumaHidrologica: number
-    ) { }
+
+export interface Region {
+
+    id: number,
+    nombre: string,
+    ciudades: Ciudades[],
+    sumaCaudalGwh: number,
+    sumaCaudalPorcentaje: number,
+    sumaPromedioAcumulado: number,
+    sumaHistoricoGwh: number,
+    sumaHidrologica: number
+
 }
 
 export class Ciudades {
@@ -32,4 +50,8 @@ export class Ciudades {
         public porcentaje_media: string,
         public porcentaje_media_medio: string) { }
 }
+
+
+
+
 

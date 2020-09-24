@@ -1,5 +1,5 @@
 <table id="test">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th *ngFor="let column of tableColumns">
                 {{column}}
@@ -7,9 +7,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let fila of valores">
-            <td *ngFor="let elemto of fila">
-                {{ elemto }}
+        <tr *ngFor="let fila of ciudades">
+            <td *ngFor="let elemento of fila">
+                {{ fila[elemento] }}
             </td>
         </tr>
     </tbody>

@@ -15,7 +15,7 @@ export class GraficaComponent implements OnInit {
   fehasAportes = [];
 
   lineChartData: ChartDataSets[] = [
-    { data: this.datosMediaHistorica, label: 'Media Historica', lineTension: 0, fill: false },
+    { data: this.datosMediaHistorica, label: 'Media Historica', lineTension: 0, fill: false, backgroundColor: 'rgba(17, 95, 132)' },
     { data: this.datosCaudal, label: 'Caudal', lineTension: 0.1, fill: false }
   ];
 
@@ -56,7 +56,9 @@ export class GraficaComponent implements OnInit {
 
   lineChartColors: Color[] = [
     {
-      borderColor: 'rgba(17, 95, 132)',
+      borderColor: 'rgba(17, 95, 132)'
+
+
     },
     {
       borderColor: 'Orange'
