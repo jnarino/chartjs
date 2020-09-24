@@ -1,18 +1,18 @@
-export class IndicadorHidricoDto {
+export interface IndicadorHidricoDto {
   Nombre: string;
   Resolucion: string;
   TipoGrafico: string;
   Variables: Variable[];
 }
 
-export class Variable {
+export interface Variable {
   Nombre: string;
   TipoGrafico: string;
   UnidadMedida: string;
   Datos: Dato[];
 }
 
-export class Dato {
+export interface Dato {
   Fecha: string;
   Valor: number;
 }
